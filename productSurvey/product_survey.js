@@ -1,6 +1,4 @@
 
-
-
 const submitButton=document.getElementById('submitBtn');
 submitButton.onclick = submitFeedback;
 
@@ -12,7 +10,8 @@ function submitFeedback(){
     const designation = document.getElementById('designation').value;
     const productType = document.getElementById('productType').value;
     const feedback = document.getElementById('feedbackText').value;
-    
+    const userExperience = document.getElementById('userExperience').value
+
     document.getElementById('userName').innerText = username;
     document.getElementById('userAge').innerHTML = age;
     document.getElementById('userEmail').innerHTML = email;
@@ -20,6 +19,7 @@ function submitFeedback(){
     document.getElementById('userDesignation').innerHTML = designation;
     document.getElementById('userProductChoice').innerHTML = productType;
     document.getElementById('userFeedback').innerHTML = feedback;
+    document.getElementById('userExperienceText').innerHTML = userExperience
     // change the div display from none to block to be visible
     document.getElementById('userInfo').style.display = 'block';
 
