@@ -7,9 +7,11 @@ function startTest() {
     
     // Reset results and timer
     document.getElementById("userInput").value = ""
+    // Enable user input
+    document.getElementById("userInput").readOnly = false;
     document.getElementById("output").innerHTML = "";
     startTime = new Date().getTime();
-
+    document.getElementById("userInput").focus()
 }
 
 function endTest() {
@@ -36,8 +38,8 @@ function endTest() {
     // Display the results
     var outputDiv = document.getElementById("output");
     outputDiv.innerHTML = "<h2>Typing Test Results:</h2>" +
+        "<p>Total length: " + userTypedText.length + "</p>" +
         "<p>Words Typed: " + typedWords + "</p>" +
         "<p>Time Elapsed: " + timeElapsed.toFixed(2) + " seconds</p>" +
         "<p>Words Per Minute (WPM): " + wpm + "</p>";
-
 }
